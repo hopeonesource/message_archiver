@@ -1,0 +1,4 @@
+services:
+  message_archiver.manager:
+    class: Drupal\message_archiver\MessageArchiverManager
+    arguments: ['@database']

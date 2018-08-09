@@ -1,0 +1,10 @@
+#message_archiver.message_archive_form:
+#  path: '/admin/config/message_archiver/message_archive'
+#  defaults:
+#    _form: '\Drupal\message_archiver\Form\MessageArchiveForm'
+#    _title: 'Message Archive Form'
+#  requirements:
+#    _permission: 'access administration pages'
+#  options:
+#    _admin_route: TRUE
+  

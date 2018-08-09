@@ -1,0 +1,67 @@
+<?php
+/**
+ * implements hook_schema
+ */
+function message_archiver_schema(){
+  $schema['message_archives'] = array(
+    'description' => 'Stores message texts sent to users',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key',
+      ),
+      'uid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "User id or recipient id",
+      ),
+      'nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Node id of the Post content type",
+      ),
+      'message_text' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => "Message text sent",
+      ),
+      'timestamp_when_queued' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp message was queued',
+      ),
+      'timestamp_when_sent' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp message was sent',
+      ),
+      'phone_number' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'default' => 0,
+        'size' => 'big',
+        'description' => 'Recipient phone number',
+      ),
+      'sms_provider_session_id' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => "sms provider session id",
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}

@@ -1,0 +1,6 @@
+#message_archiver.message_archiver_form:
+#  title: 'Message Archives'
+#  route_name: message_archiver.message_archive_form
+#  description: 'Message texts archived'
+#  parent: system.admin_config_system
+#  weight: 99
