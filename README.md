@@ -30,3 +30,6 @@ More information on how to use Github issues can be found <a href='https://guide
 ### Something to remember
 * Every commit message should describe why the code was changed or at a minimum what the change accomplished.
 * Use Feature or Issue Branches if you would like to contribute to the project.
+
+### Environment
+* Any basic vanilla Drupal 8 environment is acceptable for development. 
